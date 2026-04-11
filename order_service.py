@@ -1,29 +1,21 @@
-def calculate_total(price, tax, discount):
-    total = price + tax
+# order_service.py
 
-    # applying discount
-    if discount:
-        total = total - discount
-
-    # adding fixed platform fee (BAD PRACTICE)
-    total = total + 50
-
+def calculate_total(price, quantity):
+    total = price * quantity
     return total
 
 
 def place_order(user, items):
-    if not items:
-        return "No items"
-
-    total_price = 0
+    total = 0
 
     for item in items:
-        total_price += item["price"]
+        total += calculate_total(item["price"], item["qty"])
 
-    # missing tax calculation (BUG)
-    final_amount = calculate_total(total_price, 0, None)
+    if user == None:
+        print("User invalid")
 
-    return {
-        "user": user,
-        "amount": final_amount
-    }
+    platform_fee = 20
+
+    final_amount = total + platform_fee
+
+    return final_amount
