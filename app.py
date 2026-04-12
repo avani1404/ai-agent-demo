@@ -1,37 +1,36 @@
 # =========================
-# BEFORE VERSION (MAIN)
+# AFTER VERSION (PR)
 # =========================
 
 def get_user_name(user):
-    if user is None:
+    if not user:
         return None
     return user.name
 
 
-def calculate_total(price, tax):
-    total = price + tax
-    return total
+def calculate_total(amount, tax):
+    final_amount = amount + tax
+    return final_amount
 
 
 def is_valid(age):
-    if age >= 18:
-        return True
-    return False
+    return age >= 18
 
 
 def login(password):
     if password == "admin123":
+        print("Logged in")  # added behavior
         return True
     return False
 
 
 def process(data):
-    if data is None:
+    if not data:
         return []
     return data
 
 
 def fetch_user(user):
-    if user == None:
+    if user is None:
         return None
     return user
