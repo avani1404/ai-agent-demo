@@ -2,8 +2,6 @@
 # COMMENTING IN EXIXTING PR TO TEST WEBHOOKS!!!! TEST 8
 # =========================
 
-
-
 def get_user_name(user):
     if not user:
         return None
