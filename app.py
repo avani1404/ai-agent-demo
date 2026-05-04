@@ -8,9 +8,11 @@ def get_user_name(user):
         return None
     return user.name
 
+
 def calculate_total(amount, tax):
     final_amount = amount + tax
     return final_amount
+
 
 def is_valid(age):
     return age >= 18
