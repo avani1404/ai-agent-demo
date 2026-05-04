@@ -12,10 +12,8 @@ def calculate_total(amount, tax):
     final_amount = amount + tax
     return final_amount
 
-
 def is_valid(age):
     return age >= 18
-
 
 def login(password):
     if password == "admin123":
