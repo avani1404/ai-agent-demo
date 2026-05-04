@@ -9,6 +9,9 @@ def get_user_name(user):
     return user.name
 
 
+
+
+
 def calculate_total(amount, tax):
     final_amount = amount + tax
     return final_amount
