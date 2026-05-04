@@ -17,6 +17,7 @@ def calculate_total(amount, tax):
 def is_valid(age):
     return age >= 18
 
+
 def login(password):
     if password == "admin123":
         print("Logged in")  # added behavior
